@@ -3,6 +3,7 @@ const app = express();
 
 app.get("/", (req, res) => {
     res.send("App Running");
+    req.params.value !== "" ? res.send(req.params.value) : null;
 })
 
 const port = process.env.PORT || 3000;
